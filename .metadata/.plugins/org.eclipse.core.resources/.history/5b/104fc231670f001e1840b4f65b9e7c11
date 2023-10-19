@@ -1,0 +1,19 @@
+package coms;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assignment_Practice_1_4 {
+
+	public static void main(String[] args) {
+		
+		// declaration and instantiation of objects/variables		
+    	System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+		driver.findElement(By.xpath("//*[@id=\"post-body-3077692503353518311\"]/div[1]/div/div/h2[2]/div[1]/div/div[2]/input"));
+
+	}
+
+}

@@ -1,0 +1,36 @@
+package coms;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Amazon {
+		WebDriver driver = new ChromeDriver();
+		// TODO Auto-generated method stub
+		public void beforeMethod() throws Exception {
+			System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+				
+			
+			driver.get("https://www.amazon.in/");
+			driver.manage().window().maximize();
+		}
+		
+		public void afterMethod() throws Exception{
+			driver.close();
+		}
+		
+		public void search() throws Exception{
+			driver.findElement(By.id("twotabsearchtextbox")).sendKeys("watch");
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
+			Thread.sleep(2000);
+		}
+		
+		public void addToCart() throws Exception{
+			driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[7]/div/div/div/div/div[2]/div[1]/h2/a/span")).click();
+			Thread.sleep(2000);
+			
+			driver.findElement(By.xpath("(//input[@id='add-to-cart-button']")).click();
+			Thread.sleep(2000);
+		}
+}

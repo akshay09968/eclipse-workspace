@@ -1,0 +1,33 @@
+package coms;
+
+import org.openqa.selenium.chrome.ChromeDriver;		
+import org.openqa.selenium.*;
+
+public class FormAssign {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		// declaration and instantiation of objects/variables		
+    	System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+        String baseUrl = "https://demo.automationtesting.in/Register.html";					
+        driver.get(baseUrl);
+        
+        WebElement fname = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input"));
+        fname.sendKeys("keshav.aggarwal@gmail.com");		
+        Thread.sleep(5000);
+        
+        WebElement lname = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[2]/input"));
+        fname.sendKeys("keshav.aggarwal@gmail.com");		
+        Thread.sleep(5000);
+        
+        WebElement address = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[2]/input"));
+        address.sendKeys("asgwcw");		
+        Thread.sleep(5000);
+        
+        
+
+	}
+
+}

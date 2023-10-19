@@ -1,0 +1,60 @@
+package coms;
+
+import org.openqa.selenium.chrome.ChromeDriver;		
+import org.openqa.selenium.*;
+
+public class FormAssign {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		// declaration and instantiation of objects/variables		
+    	System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+        String baseUrl = "https://demo.automationtesting.in/Register.html";					
+        driver.get(baseUrl);
+        
+        WebElement fname = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[1]/input"));
+        fname.sendKeys("aks");		
+        Thread.sleep(5000);
+        
+        WebElement lname = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[1]/div[2]/input"));
+        fname.sendKeys("des");		
+        Thread.sleep(5000);
+        
+        WebElement address = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[2]/div/textarea"));
+        address.sendKeys("asgwcw");		
+        Thread.sleep(5000);
+        
+        fname.clear();
+        Thread.sleep(2000);
+        
+        lname.clear();
+        Thread.sleep(2000);
+        
+        address.clear();
+        Thread.sleep(2000);
+        
+        fname.sendKeys("Akshay");
+        Thread.sleep(2000);
+        lname.sendKeys("Deshpande");
+        Thread.sleep(2000);
+        address.sendKeys("Belagavi");
+        Thread.sleep(2000);
+        
+        WebElement email = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[2]/div/textarea"));
+        address.sendKeys("akshaydesh360@gmail.com");		
+        Thread.sleep(5000);
+        
+        WebElement phone = driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[4]/div/input"));
+        phone.sendKeys("akshay123");		
+        Thread.sleep(5000);
+        
+        WebElement radio = driver.findElement(By.id("//*[@id=\"basicBootstrapForm\"]/div[5]/div/label[1]/input"));
+        Thread.sleep(2000);
+        
+        driver.findElement(By.xpath("//*[@id=\"basicBootstrapForm\"]/div[7]/div/multi-select/div[2]/ul/li[8]/a").click();
+        
+	}
+
+}

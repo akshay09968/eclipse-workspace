@@ -1,0 +1,30 @@
+package coms;
+
+import java.util.Iterator;		
+import java.util.Set;		
+import org.openqa.selenium.By;		
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;	
+
+public class BrowserChildAssign {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		//setting the driver executable
+    	System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+        //Launching the site.				
+        driver.get("https://www.amazon.in/");			
+        driver.manage().window().maximize();
+        
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Tv");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"nav-search-submit-button\"]")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[5]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span")).click();
+		
+	}
+
+}

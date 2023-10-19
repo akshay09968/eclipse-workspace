@@ -1,0 +1,42 @@
+package coms;
+
+import org.openqa.selenium.chrome.ChromeDriver;		
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.*;
+
+public class Assignment_Practice_1_2 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// declaration and instantiation of objects/variables		
+		System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+		driver.get("https://www.amazon.in/");
+		driver.manage().window().maximize();
+			
+//		driver.findElement(By.id("twotabsearchtextbox"));
+//		Thread.sleep(2000);
+		
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("pendrive 16 gb");
+		Thread.sleep(2000);
+		
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		Thread.sleep(2000);
+		
+		WebElement check2 = driver.findElement(By.xpath("//*[@id=\"p_89/SanDisk\"]/span/a/div/label/i"));
+		check2.click();
+		Thread.sleep(2000);
+		
+		WebElement check3 = driver.findElement(By.cssSelector("body > div:nth-child(1) > div:nth-child(30) > div:nth-child(9) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > span:nth-child(2) > li:nth-child(2) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)"));
+		check3.click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.tagName("span")).click();
+		Thread.sleep(2000);
+			
+		driver.findElement(By.cssSelector("body > div:nth-child(1) > div:nth-child(30) > div:nth-child(9) > div:nth-child(2) > div:nth-child(1) > div:nth-child(3) > span:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > ul:nth-child(2) > span:nth-child(2) > li:nth-child(2) > span:nth-child(1) > a:nth-child(1) > span:nth-child(1)"));
+		Thread.sleep(2000);
+		
+	}
+
+}

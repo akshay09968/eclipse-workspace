@@ -1,0 +1,21 @@
+package coms;
+
+import org.openqa.selenium.chrome.ChromeDriver;		
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.*;
+
+public class TableAssign {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		// declaration and instantiation of objects/variables		
+		System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+		driver.get("https://cosmocode.io/automation-practice-webtable/");
+		Thread.sleep(2000);
+		
+		
+	}
+
+}

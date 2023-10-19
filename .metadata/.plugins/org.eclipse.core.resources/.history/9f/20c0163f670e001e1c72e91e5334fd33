@@ -1,0 +1,38 @@
+package coms;
+
+import java.text.ParseException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
+
+import org.openqa.selenium.*;
+
+public class TableAssign {
+
+	public static void main(String[] args) throws ParseException, InterruptedException  {
+		
+		// declaration and instantiation of objects/variables		
+		System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+		
+		driver.get("https://cosmocode.io/automation-practice-webtable/");
+		Thread.sleep(2000);
+		//no. of columns
+		 @SuppressWarnings("rawtypes")
+		List col = driver.findElements(By.xpath("//*[@id=\"countries\"]/tbody/tr[1]/td"));
+	    System.out.println("No of cols are : " +col.size()); 
+	    Thread.sleep(5000);
+		    
+	    //No.of rows 
+	    @SuppressWarnings("rawtypes")
+		List  rows = driver.findElements(By.xpath("//*[@id=\"countries\"]/tbody/tr")); 
+	    System.out.println("No of rows are : " + rows.size());
+		
+	}
+}

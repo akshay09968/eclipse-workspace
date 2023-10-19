@@ -1,0 +1,7 @@
+package com.testannotations;
+
+import org.testng.annotations.*;
+
+public class TestAnnotatons {
+
+}

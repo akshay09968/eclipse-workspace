@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test-Suite" >
+   <test name="ToolsQA" >
+       <classes> 
+          <class name="NewTest" />
+          <class name="testng.annotations.AnnotationPrograms" />
+       </classes>
+   </test>
+ </suite>

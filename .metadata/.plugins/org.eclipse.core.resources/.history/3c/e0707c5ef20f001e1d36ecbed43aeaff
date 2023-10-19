@@ -1,0 +1,21 @@
+package coms;
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FramesAssign {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "//home//akshay//Downloads//chromedriver_linux64//chromedriver");
+		WebDriver driver = new ChromeDriver();	
+	                 
+        //Navigate to the demo site
+        driver.get("https://demo.automationtesting.in/Frames.html");
+        driver.manage().window().maximize();
+		
+	}
+
+}
